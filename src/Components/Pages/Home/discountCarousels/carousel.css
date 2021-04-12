@@ -1,0 +1,14 @@
+.carousel-item{
+  height: 400px;
+}
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+.carousel-caption{
+  color:#000000;
+  background-color: rgba(230, 230, 230,0.8);
+}
+.carousel-caption a{
+  color:#000000;
+}
