@@ -1,10 +1,17 @@
 import React from 'react';
-import CarForm from './carform.js'
+import Form from '../../../../General/Form/form.js'
+import './car.css'
 
 class Car extends React.Component{
   render() {
     return (
-      <CarForm />
+      <form className="form mx-5 mt-2 pb-4" action="#">
+        {
+          this.props.data.map(formitem =>
+            <Form item={formitem}/>
+          )
+        }
+      </form>
     )
   }
 }

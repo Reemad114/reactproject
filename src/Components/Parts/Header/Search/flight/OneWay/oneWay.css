@@ -1,0 +1,11 @@
+#oneleaving{
+  margin-left: 3rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+#onegoing,#onesearch,#onefromdate{
+  margin-right: 2rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}

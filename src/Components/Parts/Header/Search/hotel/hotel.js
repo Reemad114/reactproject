@@ -1,11 +1,18 @@
 import React from 'react';
-import HotelForm from './hotelform.js'
+import Form from '../../../../General/Form/form.js'
+// import HotelJson from './hotelJson.js'
 import './hotel.css'
 
 class Hotel extends React.Component{
   render() {
     return (
-        <HotelForm />
+      <form className="form mx-5 mt-2 pb-4" action="#">
+        {
+          this.props.data.map(formitem =>
+            <Form item={formitem}/>
+          )
+        }
+      </form>
     )
   }
 }

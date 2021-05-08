@@ -1,0 +1,16 @@
+#carpickup,#cardropoff{
+  margin-left: 3rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+#carpickupt,#cardropoffd,#cardropofft,#carsearch{
+margin-right: 2rem;
+margin-top: 1rem;
+padding: 0.5rem;
+}
+#carpickupd{
+  margin-right: 45rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}

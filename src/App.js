@@ -6,7 +6,7 @@ import ContactUs from './Components/Pages/Contact-Us/contact-us.js';
 import AboutUs from './Components/Pages/About-Us/about-us.js';
 import SignIn from './Components/Pages/Sign-In/sign-in.js';
 import PersonalArea from './Components/Pages/PersonalArea/personalarea.js';
-
+import Contest from './Components/Pages/Contest/contest.js';
 class App extends React.Component{
   render() {
   return (
@@ -14,6 +14,7 @@ class App extends React.Component{
       <div>
           <Switch>
            <Route path="/" component={Home} exact/>
+           <Route path="/contest" component={Contest}/>
            <Route path="/contact" component={ContactUs}/>
            <Route path="/about" component={AboutUs}/>
            <Route path="/signin" component={SignIn}/>

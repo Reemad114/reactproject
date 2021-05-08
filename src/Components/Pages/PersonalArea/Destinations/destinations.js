@@ -9,22 +9,25 @@ class Destinations extends React.Component{
   render() {
     const slidecontent = [] ;
     return(
-      <MySwiper
-      slidesperview = {4}
-      slidecontent=
-      {Users.map(user =>
-        <SwiperSlide key={user.id} className="slide">
-          <div className="slide-content py-auto">
-            <div className="user-image">
-              <img src={user.imgsrc} alt="" className="user-photo" />
+      <div>
+        <h1 className="text-center shadow mt-2">Recommended Destinations For You</h1>
+        <MySwiper
+        slidesperview = {4}
+        slidecontent=
+        {Users.map(user =>
+          <SwiperSlide key={user.id} className="slide mt-2">
+            <div className="slide-content py-auto">
+              <div className="user-image">
+                <img src={user.imgsrc} alt="" className="user-photo" />
+              </div>
+              <h3>{user.userName}</h3>
+              <p>{user.text}</p>
             </div>
-            <h3>{user.userName}</h3>
-            <p>{user.text}</p>
-          </div>
-        </SwiperSlide>
-          )
-        }
-      />
+          </SwiperSlide>
+            )
+          }
+        />
+      </div>
     )
   }
 }

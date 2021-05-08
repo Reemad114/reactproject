@@ -5,8 +5,10 @@ class Discount extends React.Component{
   render() {
     return(
       <div>
-        <h2 className = "discounts text-center mt-2 shadow py-2">Hot Sales Don't Miss Out</h2>
-            <Carousel1 />
+        <h2 className = "discounts text-center mt-4 shadow py-2">Hot Sales Don't Miss Out</h2>
+            <div className="mt-4">
+              <Carousel1 data = {this.props.data}/>
+            </div>
         </div>
       )
     }

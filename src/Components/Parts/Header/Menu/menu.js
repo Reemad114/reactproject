@@ -1,9 +1,12 @@
 import React from 'react';
-import MenuItems from './menuitems.js';
+// import MenuItems from './menuitems.js';
 import Item from './Item.js'
 import "./menu.css";
 
 class Menu extends React.Component{
+  constructor(props){
+    super(props)
+  }
    myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -13,7 +16,7 @@ class Menu extends React.Component{
     }
   }
   render() {
-    const menuComponents = MenuItems.map(item =>
+    const menuComponents = this.props.data.map(item =>
         <Item
         name = {item.title}
         to = {item.url}

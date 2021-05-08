@@ -6,7 +6,7 @@ class Footer extends React.Component{
   render() {
     return (
       <div className="footer container-fluid text-center">
-        <SocialMedia />
+        <SocialMedia data = {this.props.data}/>
       </div>
     );
   }

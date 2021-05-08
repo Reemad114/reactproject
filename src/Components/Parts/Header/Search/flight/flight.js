@@ -1,39 +1,35 @@
 import React from 'react';
-
-import Tabs from '../../../../General/TabNav/tabsNav.js';
-import TabItem from '../../../../General/TabNav/tab.js'
-import FlightsTabs from './flightTabsJson.js'
-
-import TabNavContent from '../../../../General/TabNav/tabsContent.js'
-import TabItemContent from '../../../../General/TabNav/tabcontent.js'
-import FlightsTabsCon from './flightTabsConJson.js'
-
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+// import TabsJson from './TabsJson.js'
+import MultiCity from './MultiCity/multiCity.js'
+import RoundTrip from './RoundTrip/roundTrip.js'
+import OneWay from './OneWay/oneWay.js'
 import './flight.css'
 
 class Flight extends React.Component{
   render() {
-    const flightabs = FlightsTabs.map(item =>
-        <TabItem
-          className = {item.className}
-          aClassName = {item.a.className}
-          datatoggle = {item.a.datatoggle}
-          href = {item.a.href}
-          icon = {item.a.icon}
-          title = {item.a.title}
-          />
-        )
-    const tabscontent = FlightsTabsCon.map(item =>
-        <TabItemContent
-          id = {item.id}
-          className = {item.className}
-          content = {item.content}
-          />
-        )
     return (
-      <div className="flight mx-5 p-2">
-        <Tabs id="flight-tabs" className="nav nav-tabs mt-5" maintabs={flightabs}  />
-        <TabNavContent tabscontent={tabscontent} />
-      </div>
+      <Tabs className="mt-4 ml-5">
+        <TabList>
+        {
+          this.props.data.Tabs.map(item =>
+            <Tab id={item.id}>
+                {item.title}
+            </Tab>
+          )
+        }
+        </TabList>
+        <TabPanel>
+          <RoundTrip data={this.props.data.Content.Round}/>
+        </TabPanel>
+        <TabPanel>
+          <OneWay data={this.props.data.Content.Oneway}/>
+        </TabPanel>
+        <TabPanel>
+          <MultiCity data={this.props.data.Content.Multi}/>
+        </TabPanel>
+      </Tabs>
     )
   }
 }

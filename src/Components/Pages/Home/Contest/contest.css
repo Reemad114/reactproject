@@ -1,0 +1,28 @@
+.contest{
+  font-size: 120%
+}
+.contestBody{
+  height: 300px;
+}
+.contestImg{
+  height: 300px;
+  display: inline-block;
+}
+.contestAwards{
+  display: inline-block;
+  height: 300px;
+  border-left: 2px solid gray;
+
+}
+.contestAwards li{
+  list-style: none;
+}
+.contbtn{
+  display: inline-block;
+}
+.contestCinditions{
+
+  display: inline-block;
+  height: 300px;
+  border-right: 2px solid gray;
+}

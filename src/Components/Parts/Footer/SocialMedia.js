@@ -4,8 +4,11 @@ import SocialItem from './socialmediaitem.js'
 import './socialmedia.css'
 
 class SocialMedia extends React.Component{
+  constructor(props){
+    super(props)
+  }
   render() {
-    const socialComponents = SocialMediaIcons.map(item =>
+    const socialComponents = this.props.data.map(item =>
         <SocialItem className = {item.className} url = {item.url}/>)
     return (
       <div className="socialmedia">

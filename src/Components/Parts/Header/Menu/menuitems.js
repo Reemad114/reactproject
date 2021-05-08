@@ -1,7 +1,7 @@
 const MenuItems = [
     {
-        title : 'Trip Planner',
-        url : '#',
+        title : 'Book Now',
+        url : '/personal',
         cName : 'mt-5',
         iconname : ''
     },

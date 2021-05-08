@@ -18,10 +18,10 @@ class MyCard extends React.Component{
             src={this.props.item.img.src}
           />
         <Card.Body className="cardbody">
-          <Card.Title className = "title">
+          <Card.Title className = {this.props.item.titleclassN}>
             {this.props.item.title}
           </Card.Title>
-          <Card.Text className = "text">
+          <Card.Text className = {this.props.item.textclassN}>
             {this.props.item.text}
           </Card.Text>
           <Button className="cardbtn"

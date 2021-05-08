@@ -1,19 +1,14 @@
 import React from 'react';
-import FormItems from './formitems.js';
+// import FormItems from './formitems.js';
 import Formitem from '../../../General/formitem.js'
 
 
 class Form extends React.Component{
   constructor(props) {
-    super(props)
-    this.submitted = this.submitted.bind(this)
-  }
-  submitted() {
-    alert("this");
-
-  }
+  super(props);
+}
   render() {
-    const formComponents = FormItems.map(item =>
+    const formComponents = this.props.data.map(item =>
         <Formitem
           cName = {item.cName}
           labelfor = {item.labelfor}
@@ -32,7 +27,7 @@ class Form extends React.Component{
             <b>Message:</b>
           </label>
           <textarea className="form-control" rows="5" id="msg" required></textarea >
-          <button onClick={this.submitted} type="submit" id="submit" class="mb-2 btn mt-2 btn-dark">Send</button>
+          <button  type="submit" id="submit" class="mb-2 btn mt-2 btn-dark">Send</button>
        </div>
       </form>
     );
