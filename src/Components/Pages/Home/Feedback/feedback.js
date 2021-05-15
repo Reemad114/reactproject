@@ -2,7 +2,6 @@ import React from 'react';
 import { SwiperSlide } from 'swiper/react';
 
 import MySwiper from '../../../General/Swiper/swiper.js';
-// import Users from './feedbackJson.js';
 import './feedback.css';
 
 

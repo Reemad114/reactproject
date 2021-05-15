@@ -1,6 +1,5 @@
 
 import React from 'react';
-// import DiscountJson from './discountJson.js';
 import Carousel from '../../../General/Carousel/carousel.js';
 import './carousel.css'
 

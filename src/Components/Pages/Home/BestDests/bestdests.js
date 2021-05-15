@@ -7,7 +7,7 @@ class BestDests extends React.Component{
     super(props)
   }
   render() {
-    {/* Mapping over the destinations json and return card for every item */}
+    {/* Mapping over the destinations json and return a card for every item */}
     const bestdestCards = this.props.data.map(oneitem =>
         <MyCard item={oneitem}/>
       );

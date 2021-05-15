@@ -1,6 +1,5 @@
 import React from 'react';
 import Form from '../../../../../General/Form/form.js'
-// import OneJson from './oneWayJson.js'
 import './oneWay.css'
 
 class OneWay extends React.Component{

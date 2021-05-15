@@ -1,7 +1,6 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-// import TabsJson from './TabsJson.js'
 import MultiCity from './MultiCity/multiCity.js'
 import RoundTrip from './RoundTrip/roundTrip.js'
 import OneWay from './OneWay/oneWay.js'

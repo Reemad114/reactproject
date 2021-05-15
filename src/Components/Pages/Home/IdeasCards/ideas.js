@@ -1,6 +1,5 @@
 import React from 'react';
 import MyCard from '../../../General/Card/card.js'
-// import IdeasCards from './ideasJson.js'
 
 class Ideas extends React.Component{
   constructor(props){

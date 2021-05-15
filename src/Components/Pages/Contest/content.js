@@ -11,10 +11,12 @@ class Content extends React.Component{
     return(
       <div>
         <div className="text-center m-5">
+          <h2 className="shadow mt-2">Upload Your File Here</h2>
           <UplodBtn/>
         </div>
         <div className="text-center m-5">
-        <Gallery data={this.props.data}/>
+          <h2 className="shadow mt-2">Users Creativity</h2>
+          <Gallery data={this.props.data}/>
         </div>
       </div>
     );

@@ -1,6 +1,5 @@
 import React from 'react';
 import Form from '../../../../General/Form/form.js'
-// import HotelJson from './hotelJson.js'
 import './hotel.css'
 
 class Hotel extends React.Component{

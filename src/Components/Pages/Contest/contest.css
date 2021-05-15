@@ -1,1 +1,7 @@
-
+#contestpage{
+  background-image: url('../../../images/img2.jpg');
+  background-size:cover;
+}
+.ContestImg{
+  height: 300px;
+}
