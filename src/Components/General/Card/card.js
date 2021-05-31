@@ -13,20 +13,20 @@ class MyCard extends React.Component{
           className = {this.props.item.classN}
       >
         <Card.Img
-            className={this.props.item.img.className}
-            variant={this.props.item.img.variant}
-            src={this.props.item.img.src}
+            className={this.props.item.img_classN}
+            variant={this.props.item.img_variant}
+            src={this.props.item.img_src}
           />
         <Card.Body className="cardbody">
-          <Card.Title className = {this.props.item.titleclassN}>
+          <Card.Title className = {this.props.item.title_classN}>
             {this.props.item.title}
           </Card.Title>
-          <Card.Text className = {this.props.item.textclassN}>
+          <Card.Text className = {this.props.item.text_classN}>
             {this.props.item.text}
           </Card.Text>
           <Button className="cardbtn"
-            btn_variant={this.props.item.button.variant}
-            btn={this.props.item.button.btn}
+            btn_variant={this.props.item.btn_variant}
+            btn={this.props.item.btn_text}
             />
         </Card.Body>
       </Card>

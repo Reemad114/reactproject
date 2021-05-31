@@ -19,8 +19,8 @@ class Menu extends React.Component{
         <Item
         name = {item.title}
         to = {item.url}
-        cName = {item.cName}
-        iconname = {item.iconname}
+        cName = {item.className}
+        iconname = {item.icon}
         />)
 
     return (
