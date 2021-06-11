@@ -3,7 +3,7 @@ import React from "react"
 class SocialItem extends React.Component{
   render() {
     return (
-      <a href={this.props.url}><i className={this.props.className}></i></a>
+      <a href={this.props.url} className={this.props.className}><i className={this.props.icon}></i></a>
     )
   }
 }

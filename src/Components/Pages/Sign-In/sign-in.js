@@ -10,7 +10,7 @@ import './sign-in.css'
     this.state = { data: [] };
   }
     componentDidMount() {
-      fetch(`/auth`)
+      fetch(`/users/signin`)
         .then(res => res.json())
         .then(json => this.setState({ data: json }));
   }

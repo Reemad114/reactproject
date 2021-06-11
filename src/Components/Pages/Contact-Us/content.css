@@ -1,7 +1,6 @@
-.content{
-  border-top: 3px solid snow;
-}
-.Contactform{
-  font-family: 'Actor';
-  background-color: rgba(230, 230, 230,0.4);
+.contact-us-form{
+    width : 30%;
+    background-color: rgba(196, 189, 189, 0.5);
+    padding: 2rem;
+    margin-bottom: 2rem;
 }

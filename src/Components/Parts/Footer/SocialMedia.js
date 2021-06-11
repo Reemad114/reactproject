@@ -9,7 +9,7 @@ class SocialMedia extends React.Component{
   }
   render() {
     const socialComponents = this.props.data.map(item =>
-        <SocialItem className = {item.className} url = {item.url}/>)
+        <SocialItem className = {item.className} url = {item.url} icon={item.icon}/>)
     return (
       <div className="socialmedia">
         {socialComponents}

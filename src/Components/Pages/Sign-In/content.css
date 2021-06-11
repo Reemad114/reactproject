@@ -1,0 +1,17 @@
+.sign-in{
+    width : 30%;
+    background-color: rgba(196, 189, 189, 0.5);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sign-Up{
+    margin-top: 1rem;
+    font-size: 120%;
+    font-weight: bold;
+    color:rgba(53, 48, 48, 0.897)
+}
+
+.sign-Up a {
+    color:snow
+}
