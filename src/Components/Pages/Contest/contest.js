@@ -20,7 +20,7 @@ import './contest.css'
       return (
         <div id = "contestpage" className = "contest">
           <Header data = {this.state.data.Header}/>
-          <Content/>
+          <Content data = {this.state.data.Content}/>
           <Footer data = {this.state.data.Footer}/>
         </div>
       );

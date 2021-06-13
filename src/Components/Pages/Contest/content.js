@@ -1,6 +1,5 @@
 import React from 'react';
-import UplodBtn from '../../General/UploadFile/upload.js'
-import Gallery from './gallery.js'
+import Brochure from './brochure'
 import './content.css'
 
 class Content extends React.Component{
@@ -9,15 +8,20 @@ class Content extends React.Component{
   }
   render() {
     return(
-      <div>
-        <div className="text-center m-5">
-          <h2 className="shadow mt-2">Upload Your File Here</h2>
-          <UplodBtn/>
+      <div className="contest container">
+        <h2>Upload Your Brochure Here :</h2>
+        <form action="/contest/store-img" method="POST">
+          <input type="file" name="image"></input>
+          <button type="submit">Upload</button>
+        </form>
+        <h2>Participants Brochures</h2>
+        <div className="brochures">
+          {this.props.data.map(item=>
+            <Brochure
+              data={item}
+            />
+            )}
         </div>
-        {/* <div className="text-center m-5">
-          <h2 className="shadow mt-2">Users Creativity</h2>
-          <Gallery data={this.props.data}/>
-        </div> */}
       </div>
     );
   }
