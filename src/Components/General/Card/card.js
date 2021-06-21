@@ -1,6 +1,6 @@
 import React from "react"
 import Card from 'react-bootstrap/Card';
-import Button from '../Button/button.js';
+import Button from 'react-bootstrap/Button';
 
 class MyCard extends React.Component{
   constructor(props){
@@ -24,10 +24,8 @@ class MyCard extends React.Component{
           <Card.Text className = {this.props.item.text_classN}>
             {this.props.item.text}
           </Card.Text>
-          <Button className="cardbtn"
-            btn_variant={this.props.item.btn_variant}
-            btn={this.props.item.btn_text}
-            />
+          <Button className="cardbtn" href={this.props.item.btn_href} variant={this.props.item.btn_variant}>{this.props.item.btn_text}</Button>
+
         </Card.Body>
       </Card>
     )

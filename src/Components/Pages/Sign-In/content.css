@@ -5,13 +5,13 @@
     margin-bottom: 2rem;
 }
 
-.sign-Up{
+#sign-Up{
     margin-top: 1rem;
     font-size: 120%;
     font-weight: bold;
-    color:rgba(53, 48, 48, 0.897)
+    color:rgba(219, 203, 203, 0.897);
 }
 
-.sign-Up a {
+#sign-Up a {
     color:snow
 }

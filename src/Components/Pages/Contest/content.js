@@ -1,29 +1,40 @@
 import React from 'react';
-import Brochure from './brochure'
+import axios from 'axios';
 import './content.css'
 
 class Content extends React.Component{
-  constructor(props){
-    super(props)
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      photos: [],
+    };
+
+  this.uploadHandler = this.uploadHandler.bind(this);
   }
+
+  uploadHandler(event) {
+    const data = new FormData();
+    data.append('file', event.target.files[0]);
+    axios.post('/upload', data)
+      .then((res) => {
+        this.setState({ photos: [res.data, ...this.state.photos] });
+      });
+  }
+
   render() {
-    return(
-      <div className="contest container">
-        <h2>Upload Your Brochure Here :</h2>
-        <form action="/contest/store-img" method="POST">
-          <input type="file" name="image"></input>
-          <button type="submit">Upload</button>
-        </form>
-        <h2>Participants Brochures</h2>
-        <div className="brochures">
-          {this.props.data.map(item=>
-            <Brochure
-              data={item}
-            />
-            )}
+    return  (
+      <div>
+        <div>
+          <input type="file" name="file" onChange={this.uploadHandler}/>
         </div>
+        {this.state.photos.map(photo => (
+          <img src={`http://localhost:3000/${photo.filename}`} />
+        ))}
       </div>
-    );
+    )
   }
 }
+
 export default Content;

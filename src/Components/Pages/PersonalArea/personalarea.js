@@ -9,7 +9,7 @@ import Footer from '../../Parts/Footer/footer.js';
     this.state = { data: [] };
   }
     componentDidMount() {
-      fetch(`/auth/profile`)
+      fetch(`/users/profile`)
         .then(res => res.json())
         .then(json => this.setState({ data: json }));
   }

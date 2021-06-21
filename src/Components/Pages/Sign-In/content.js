@@ -1,20 +1,22 @@
 import React from 'react';
-import Input from "../../General/Form/input";
-import Button from "../../General/Form/button";
+import { withRouter } from 'react-router-dom';
 import './content.css'
 
 class SignInForm extends React.Component{
-  constructor() {
+  constructor() { 
     super();
+    //initializing input, errors properties
+    //input property: the input results of the values that were inserted 
+    //errors property: the errors that will be shown
     this.state = {
       input: {},
       errors: {}
     };
-     
+     //
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-     
+  //  
   handleChange(event) {
     let input = this.state.input;
     input[event.target.name] = event.target.value;
@@ -34,10 +36,10 @@ class SignInForm extends React.Component{
         input["username"] = "";
         input["email"] = "";
         this.setState({input:input});
-  
-        alert('Demo Form is submitted');
+        this.props.history.push('/personal');
     }
   }
+
   validate(){
     let input = this.state.input;
     let errors = {};
@@ -64,11 +66,12 @@ class SignInForm extends React.Component{
     });
 
     return isValid;
-}
+  }
+
 render() {
   return (
-    <div>
-      <form className="sign-in container" onSubmit={this.handleSubmit}>
+    <div className="container ">
+      <form className="sign-in mx-auto" onSubmit={this.handleSubmit}>
 
         <div class="form-group">
           <label for="username">Username:</label>
@@ -96,10 +99,10 @@ render() {
   
               <div className="text-danger">{this.state.errors.password}</div>
           </div>
-          <input type="submit" value="Submit" class="btn btn-dark" />
+          <input type="submit" value="Submit" class="btn btn-dark"/>
 
   </form>
-  <p className="sign-Up">
+  <p id="sign-Up" >
     Don't have an account ? <a href="/signup">sign-up</a>
   </p>
   </div>
@@ -107,4 +110,4 @@ render() {
 }
 }
 
-export default SignInForm;
+export default withRouter(SignInForm);

@@ -1,121 +1,123 @@
 import React from 'react';
 
-/* Import Components */
-import Input from "../../General/Form/input";
-import TextArea from "../../General/Form/textarea";
-import Button from "../../General/Form/button";
 import './content.css'
 
 class Content extends React.Component{
-  constructor(props) {
-    super(props);
-
+  constructor() { 
+    super();
+    //initializing input, errors properties
+    //input property: the input results of the values that were inserted 
+    //errors property: the errors that will be shown
     this.state = {
-      newMsg: {
-        name: "",
-        email: "",
-        message: ""
-        },
-
+      input: {},
+      errors: {}
     };
-    this.handleEmail = this.handleEmail.bind(this);
-    this.handleFullName = this.handleFullName.bind(this);
-    this.handleMessage = this.handleMessage.bind(this);
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+     //
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  //  
+  handleChange(event) {
+    let input = this.state.input;
+    input[event.target.name] = event.target.value;
+  
+    this.setState({
+      input
+    });
+  }
+     
+  handleSubmit(event) {
+    event.preventDefault();
+  
+    if(this.validate()){
+        console.log(this.state);
+  
+        let input = {};
+        input["name"] = "";
+        input["email"] = "";
+        input["message"] = "";
+
+        this.setState({input:input});
+  
+        alert('Demo Form is submitted');
+    }
   }
 
-  /* This lifecycle hook gets executed when the component mounts */
+  validate(){
+    let input = this.state.input;
+    let errors = {};
+    let isValid = true;
+ 
 
+    if (!input["email"]) {
+      isValid = false;
+      errors["email"] = "Please enter your email Address.";
+    }
 
-  handleFullName(e) {
-    let value = e.target.value;
-    this.setState(
-      prevState => ({
-        newMsg: {
-          ...prevState.newMsg,
-          name: value
-        }
-      }),
-    );
+    if (typeof input["email"] !== "undefined") {
+        
+      var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+      if (!pattern.test(input["email"])) {
+        isValid = false;
+        errors["email"] = "Please enter valid email address.";
+      }
+    }
+
+    this.setState({
+      errors: errors
+    });
+
+    return isValid;
   }
 
-  handleEmail(e) {
-    let value = e.target.value;
-    this.setState(
-      prevState => ({
-        newMsg: {
-          ...prevState.newMsg,
-          email: value
-        }
-      }),
-    );
-  }
+render() {
+  return (
+    <div className="container">
+      <form className="sign-in mx-auto" onSubmit={this.handleSubmit}>
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input 
+              type="text" 
+              name="name" 
+              value={this.state.input.name}
+              onChange={this.handleChange}
+              class="form-control" 
+              placeholder="Enter Your Name" 
+              id="name" />
+  
+              <div className="text-danger">{this.state.errors.email}</div>
+          </div>
 
-  handleMessage(e) {
-    console.log("Inside handleTextArea");
-    let value = e.target.value;
-    this.setState(
-      prevState => ({
-        newMsg: {
-          ...prevState.newMsg,
-          message: value
-        }
-      }),
-    );
-  }
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input 
+              type="text" 
+              name="email" 
+              value={this.state.input.email}
+              onChange={this.handleChange}
+              class="form-control" 
+              placeholder="Enter email" 
+              id="email" />
+            </div>
 
-  handleFormSubmit(e) {
-    e.preventDefault();
-    let msgData = this.state.newMsg;
-    alert(msgData.email+" "+ msgData.message+" "+ msgData.name);
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea 
+              name="message" 
+              value={this.state.input.message}
+              onChange={this.handleChange}
+              class="form-control" 
+              placeholder="Enter Message" 
+              id="message"
+              rows={5} />
+  
+              <div className="text-danger">{this.state.errors.email}</div>
+          </div>
 
-  }
+          <input type="submit" value="Submit" class="btn btn-dark" />
 
-
-
-  render() {
-    return (
-      <form className="contact-us-form container" onSubmit={this.handleFormSubmit}>
-        <Input
-          classname={"name"}
-          inputType={"text"}
-          title={"Enter Your Full Name:"}
-          name={"name"}
-          value={this.state.newMsg.name}
-          placeholder={"Full Name"}
-          handleChange={this.handleFullName}
-        />{" "}
-        {/* Name of the user */}
-
-        <Input
-          classname={"email"}
-          inputType={"email"}
-          title={"Enter Your Email:"}
-          name={"email"}
-          value={this.state.newMsg.email}
-          placeholder={"Email"}
-          handleChange={this.handleEmail}
-        />{" "}
-        {/* Email of the user */}
-
-        <TextArea
-        classname={"msg"}
-          title={"Enter Your Message:"}
-          rows={10}
-          value={this.state.newMsg.message}
-          name={"currentPetInfo"}
-          handleChange={this.handleMessage}
-          placeholder={"how can we help you!"}
-        />
-        {/* Your Message */}
-
-        <Button
-          action={this.handleFormSubmit}
-          type={"dark"}
-          title={"Send"}
-        />{" "}
-        {/*Submit */}
-    </form>
+      </form>
+    </div>
     );
     
   }

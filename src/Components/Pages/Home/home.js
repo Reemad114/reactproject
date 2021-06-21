@@ -4,12 +4,13 @@ import Content from './content.js';
 import Footer from '../../Parts/Footer/footer.js';
 
 class Home extends React.Component{
+  //the constructor of the component 
   constructor() {
-    super();
-    this.state = { data: [] };
+    super(); 
+    this.state = { data: [] };//defines the data state
 }
   componentDidMount() {
-    fetch(`/home`)
+    fetch(`/home`) //fetch API that fetches data from the server to the client
       .then(res => res.json())
       .then(json => this.setState({ data: json }));
 }
