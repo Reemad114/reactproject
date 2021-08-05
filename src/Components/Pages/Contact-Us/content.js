@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './content.css'
 
 class Content extends React.Component{
@@ -36,10 +35,8 @@ class Content extends React.Component{
         input["name"] = "";
         input["email"] = "";
         input["message"] = "";
-
         this.setState({input:input});
-  
-        alert('Demo Form is submitted');
+        alert('Thank You, Your Message Was Sent Successfully');
     }
   }
 
@@ -72,8 +69,14 @@ class Content extends React.Component{
 
 render() {
   return (
-    <div className="container">
-      <form className="sign-in mx-auto" onSubmit={this.handleSubmit}>
+    <div className="contactpage container">
+      <ul id="contact-info" >
+        <li>Tel: 04-9803471</li>
+        <li>Email: SkyCruise@conact.com</li>
+        <li>Fax: 03-9978546</li>
+      </ul>
+      <h2>Please Fill Out The Form So We Can Help You</h2>
+      <form className="contact-us-form mx-auto" onSubmit={this.handleSubmit}>
           <div class="form-group">
             <label for="name">Full Name:</label>
             <input 
@@ -109,7 +112,7 @@ render() {
               class="form-control" 
               placeholder="Enter Message" 
               id="message"
-              rows={5} />
+              rows={8} />
   
               <div className="text-danger">{this.state.errors.email}</div>
           </div>

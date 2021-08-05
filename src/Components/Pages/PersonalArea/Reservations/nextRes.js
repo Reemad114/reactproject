@@ -1,9 +1,10 @@
 import React from 'react';
 import Modal from '../../../General/Modal/modal.js'
-import FlightRes from './Flight/flightRes.js'
+// import FlightRes from './Flight/flightRes.js'
 import HotelRes from './Hotel/hotelRes.js'
 import CarRes from './Car/carRes.js'
-
+import FlightRes from '../.././../General/FlightRes/flightres'
+import '../content.css'
 class NextRes extends React.Component{
   constructor(props){
     super(props)
@@ -11,8 +12,8 @@ class NextRes extends React.Component{
   render() {
     return (
       <div className="next-res">
-        <h2>Next Reservations</h2>
-        <div>
+        <h1 id="nexttitle" className="text-center shadow mt-2">Next Reservations</h1>
+        {/* <div>
           <Modal
           val = "Flights"
           data = {
@@ -41,7 +42,8 @@ class NextRes extends React.Component{
             )
           }
           />
-        </div>
+        </div> */}
+        <FlightRes data={this.props.data.Flight}/>
       </div>
     );
   }

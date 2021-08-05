@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../Parts/Header/headerHome.js';
 import Content from './content.js';
 import Footer from '../../Parts/Footer/footer.js';
-
+import './home.css'
 class Home extends React.Component{
   //the constructor of the component 
   constructor() {
@@ -18,7 +18,7 @@ class Home extends React.Component{
     if(this.state.data.length == 0)
       return (<p>Error</p>)
     return (
-      <div>
+      <div id="homepage">
         <Header data = {this.state.data.Header}/>
         <Content data = {this.state.data.Content}/>
         <Footer data = {this.state.data.Footer}/>

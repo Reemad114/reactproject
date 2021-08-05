@@ -128,9 +128,9 @@ class Content extends React.Component{
      
   render() {
     return (
-      <div className="container ">
+      <div className="container signuppage">
         <form className="sign-up-form mx-auto" onSubmit={this.handleSubmit}>
-  
+          <p id="signuptitle"><h1>Please Sign Up</h1></p>
           <div class="form-group">
             <label for="username">Username:</label>
             <input 

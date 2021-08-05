@@ -70,9 +70,9 @@ class SignInForm extends React.Component{
 
 render() {
   return (
-    <div className="container ">
+    <div className="container signinpage">
       <form className="sign-in mx-auto" onSubmit={this.handleSubmit}>
-
+        <p id="signintitle"><h1 className="text-center">Please Sign In</h1></p>
         <div class="form-group">
           <label for="username">Username:</label>
           <input 
@@ -100,11 +100,11 @@ render() {
               <div className="text-danger">{this.state.errors.password}</div>
           </div>
           <input type="submit" value="Submit" class="btn btn-dark"/>
+          <p id="sign-Up" className="">
+            Don't have an account ? <a href="/signup">sign-up</a>
+          </p>
 
   </form>
-  <p id="sign-Up" >
-    Don't have an account ? <a href="/signup">sign-up</a>
-  </p>
   </div>
   )
 }

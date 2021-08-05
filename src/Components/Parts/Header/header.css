@@ -1,4 +1,8 @@
 .headerhome{
   background-image: url('../../../images/img2.jpg');
   background-size: cover;
+  font-family:  sans-serif;
+};
+.header{
+  font-family:  sans-serif;
 }

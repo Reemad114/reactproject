@@ -1,18 +1,18 @@
 .aboutUs{
-  background: url('../../../images/nature.jpg');
-  background-size: cover;
-  height: auto;
+  background: url('../../../images/img2.jpg');
+  background-size:cover;
+  height: 810px;;
 }
 
 #ourstory{
   height: 350px;
-  background-color: rgba(230, 230, 230,0.6);
+  background-color: rgba(230, 230, 230,0.5);
 }
 #ourstory .H{
   font-family: 'Acme';
 }
 #ourstory .text{
-  font-family: 'Actor';
+  font-family:  sans-serif;
   font-size: 120%;
 }
 /* content-END */

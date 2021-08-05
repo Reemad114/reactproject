@@ -45,7 +45,8 @@ class OneWay extends React.Component{
       .then(response => response.json())
       .then(json => this.setState({ responed: json }))
       console.log(this.state.responed)
-
+      
+      
     }
     render() {
       return (

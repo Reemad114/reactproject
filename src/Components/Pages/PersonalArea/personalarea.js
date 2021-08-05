@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../Parts/Header/headerHome.js';
 import Content from './content.js';
 import Footer from '../../Parts/Footer/footer.js';
+import './content.css'
 
   class PersonalArea extends React.Component{
     constructor() {
@@ -17,7 +18,7 @@ import Footer from '../../Parts/Footer/footer.js';
       if(this.state.data.length == 0)
         return (<p>ops</p>)
       return (
-        <div>
+        <div id="profilepage">
         <Header data = {this.state.data.Header}/>
         <Content data = {this.state.data.Content}/>
         <Footer data = {this.state.data.Footer}/>

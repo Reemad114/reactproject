@@ -1,3 +1,8 @@
 .constcard{
   display: inline-block;
 }
+#contestcontent img{
+  width:400px;
+  height: 200px;
+  margin: 3rem;
+}

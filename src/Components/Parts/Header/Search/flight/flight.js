@@ -36,7 +36,7 @@ class Flight extends React.Component{
           <label>Class:</label>
           <Dropdown
             baseClassName="rdn"
-            className=""
+            className="class"
             clearIcon={<span className="clear">X</span>}
             isClearable
             matcher={function noRefCheck(){}}
@@ -50,6 +50,29 @@ class Flight extends React.Component{
               'Business Class'
             ]}
             value="Economy"
+          />
+        </div>
+        <div className="col-2">
+          <label>Passengers:</label>
+          <Dropdown
+            baseClassName="rdn"
+            className="passenger"
+            clearIcon={<span className="clear">X</span>}
+            isClearable
+            matcher={function noRefCheck(){}}
+            menu="div"
+            onChange={function noRefCheck(){}}
+            onClose={function noRefCheck(){}}
+            onOpen={function noRefCheck(){}}
+            options={[
+              '1',
+              '2',
+              '3',
+              '4',
+              '5',
+              '6'
+            ]}
+            value="1"
           />
         </div>
       </div>

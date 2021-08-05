@@ -14,25 +14,25 @@ const UserFeedback =[
   {
     "id" : 3,
     "userName" : "London",
-    "imgsrc" : "/images/img3.jpg",
+    "imgsrc" : "/images/Destinations/London.jpg",
     "text" :  ""
   },
   {
     "id" : 4,
     "userName" : "Tokyo",
-    "imgsrc" : "/images/img4.jpg",
+    "imgsrc" : "/images/Destinations/tokyo.jpg",
     "text" :  ""
   },
   {
     "id" : 5,
     "userName" : "Sydney",
-    "imgsrc" : "/images/img3.jpg",
+    "imgsrc" : "/images/Destinations/sydney.jpg",
     "text" : ""
   },
   {
     "id" : 6,
     "userName" : "New York",
-    "imgsrc" : "/images/img4.jpg",
+    "imgsrc" : "/images/Destinations/newyork.jpg",
     "text" : ""
   }
 ]

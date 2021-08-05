@@ -1,6 +1,15 @@
 .sign-up-form{
-    width : 30%;
+    width : 35%;
     background-color: rgba(196, 189, 189, 0.5);
     padding: 2rem;
-    margin-bottom: 2rem;
+    height:auto ;
+    margin-top: 2rem;
+}
+.signuppage{
+    margin-top: 3rem;
+    font-family:  sans-serif;
+}
+#signuptitle{
+    font-family: 'Acme';
+    border-bottom: 2px solid snow;
 }

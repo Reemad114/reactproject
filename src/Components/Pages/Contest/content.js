@@ -25,13 +25,23 @@ class Content extends React.Component{
 
   render() {
     return  (
-      <div>
-        <div>
-          <input type="file" name="file" onChange={this.uploadHandler}/>
+      <div id="contestcontent" className="container">
+        <div className="mt-2">
+          <h1 className="text-center">Welcome To The Brochure Contest</h1>
+          <div className="text-center">
+            <input type="file" name="file" onChange={this.uploadHandler}/>
+          </div>
         </div>
+        <div className="mt-2">
         {this.state.photos.map(photo => (
           <img src={`http://localhost:3000/${photo.filename}`} />
         ))}
+
+          <img src="../../../images/family.jpg"/>
+          <img src="../../../images/family.jpg"/>
+          <img src="../../../images/family.jpg"/>
+          <img src="../../../images/family.jpg"/>
+        </div>
       </div>
     )
   }

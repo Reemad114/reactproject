@@ -9,7 +9,7 @@ import SignUp from './Components/Pages/Sign-Up/sign-up';
 import PersonalArea from './Components/Pages/PersonalArea/personalarea.js';
 import Contest from './Components/Pages/Contest/contest.js';
 import Firstdest from './Components/Pages/dests/dests';
-import Flightres from './Components/General/FlightRes/flightres'
+import Flightres from './Components/Pages/FlightReservation/res'
 class App extends React.Component{
   render() {
   return (
@@ -25,7 +25,6 @@ class App extends React.Component{
            <Route path="/personal" component={PersonalArea}/>
            <Route path="/firstdest" component={Firstdest}/>
            <Route path="/flightres" component={Flightres}/>
-
          </Switch>
       </div>
     </BrowserRouter>

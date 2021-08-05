@@ -1,6 +1,24 @@
 .contact-us-form{
-    width : 30%;
+    width : 40%;
     background-color: rgba(196, 189, 189, 0.5);
     padding: 2rem;
     margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: large;
+}
+#contact-info li{
+    list-style: none;
+    display: inline-block;
+    font-style: oblique;
+    margin: 2rem;
+    padding: 1rem;
+    font-size: 120%;
+    background-color: rgba(196, 189, 189, 0.3);
+}
+.contactpage h2{
+    margin-left: 17rem;
+    font-family: 'Acme';
+}
+#contact-info{
+    margin-left: 7rem;
 }

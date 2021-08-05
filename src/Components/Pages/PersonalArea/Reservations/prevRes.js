@@ -11,7 +11,7 @@ class PrevRes extends React.Component{
   render() {
     return (
       <div className="next-res">
-      <h2>Previous Reservations</h2>
+      <h1 id="prevtitle" className="text-center shadow mt-2">Previous Reservations</h1>
         <div>
           <Modal
           val = "Flights"

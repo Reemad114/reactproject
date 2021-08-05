@@ -1,17 +1,29 @@
 .sign-in{
-    width : 30%;
+    width : 35%;
     background-color: rgba(196, 189, 189, 0.5);
     padding: 2rem;
-    margin-bottom: 2rem;
+    height:auto ;
+    margin-top: 2rem;
 }
 
 #sign-Up{
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-size: 120%;
     font-weight: bold;
-    color:rgba(219, 203, 203, 0.897);
+    color:rgb(10, 7, 7);
+    border-top: 2px solid snow;
+    padding-top: 1rem;
 }
 
 #sign-Up a {
     color:snow
+}
+
+.signinpage{
+    margin-top: 3rem;
+    font-family:  sans-serif;
+}
+#signintitle{
+    font-family: 'Acme';
+    border-bottom: 2px solid snow;
 }
